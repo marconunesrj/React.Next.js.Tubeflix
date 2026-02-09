@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./globals.css";
 
 
@@ -13,9 +14,9 @@ export default function RootLayout({ children }) {
         <header>
           <h1>Tubeflix</h1>
           <nav>
-            <a href="/">Início</a>
-            <a href="/videos">Vídeos</a>
-            <a href="/musics">Músicas</a>
+            <Link href="/">Início</Link>
+            <Link href="/videos">Vídeos</Link>
+            <Link href="/musics">Músicas</Link>
           </nav>
         </header>
         <main>
