@@ -1,6 +1,6 @@
 import Link from "next/link";
 import "./globals.css";
-
+import styles from "./layout.module.css"; 
 
 export const metadata = {
   title: "Tubeflix",
@@ -10,19 +10,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body>
-        <header>
-          <h1>Tubeflix</h1>
+      <body className={styles.body}>
+        <header className={styles.header}>
+          <h1><Link href="/">Tubeflix</Link></h1>
           <nav>
-            <Link href="/">Início</Link>
             <Link href="/videos">Vídeos</Link>
             <Link href="/musics">Músicas</Link>
           </nav>
         </header>
-        <main>
+        <main className={styles.main}>
           {children}
         </main>
-        <footer>
+        <footer className={styles.footer}>
           <p>&copy; 2024 Tubeflix. Todos os direitos reservados.</p>
         </footer>
       </body>
