@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./layout.module.css"; 
 import "./globals.css";
 import "./theme.css";
+import ThemeToggle from "@/components/themeToggle";
 
 export const metadata = {
   title: "Tubeflix",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         </main>
         <footer className={styles.footer}>
           <p>&copy; 2024 Tubeflix. Todos os direitos reservados.</p>
+          <ThemeToggle />
         </footer>
       </body>
     </html>
