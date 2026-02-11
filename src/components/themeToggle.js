@@ -1,15 +1,12 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import style from './themeToggle.module.css';
+import { ThemeContext } from '@/contexts/themeContext';
 
 export default function ThemeToggle() { 
 
-    const [themeLight, setThemeLight] = useState(false);
-
-     useEffect(() => {
-        document.documentElement.setAttribute('data-theme', themeLight ? 'light' : 'dark' );
-    }, [themeLight]);
+    const { themeLight, setThemeLight } = useContext(ThemeContext);
 
     return (
         <button className={style.toggleButton} onClick={() => setThemeLight(!themeLight)}>
